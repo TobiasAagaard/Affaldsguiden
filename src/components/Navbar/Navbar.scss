@@ -1,0 +1,20 @@
+@import "../../assets//Vars.scss";
+
+.navContainer {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    align-items: center;
+    justify-items: center;
+
+    ul {
+        display: flex;
+        li {
+            list-style: none;
+            a {
+                color: $black;
+                text-decoration: none;
+                padding: 0 1rem;
+            }
+        }
+    }
+}
