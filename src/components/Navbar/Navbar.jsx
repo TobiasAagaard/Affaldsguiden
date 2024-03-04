@@ -17,7 +17,9 @@ export const Navbar = () => {
                     <li><NavLink to={"/bestil"}>Bestil beholde</NavLink></li>
                 </ul>
                 <Link to={"/login"}>
-                    <img src={LoginUnlock} alt="icon for login page" />
+                    <div className="imageContainer">
+                        <img src={LoginUnlock} alt="icon for login page" />
+                    </div>
                 </Link>
         </nav>
     )

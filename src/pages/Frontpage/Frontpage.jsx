@@ -1,6 +1,7 @@
+import { HeroSlider } from "./Slider/Slider";
 
 export const Frontpage = () => {
     return (
-        <h1>Frontpage</h1>
+        <HeroSlider />
     )
 }

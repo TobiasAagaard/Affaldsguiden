@@ -6,8 +6,9 @@
     align-items: center;
     justify-items: center;
     border-top: solid 2px $lightGrey;
-    margin: 2rem 1rem 0 1rem;
-    
+    margin: 3rem 1rem 0 1rem;
+    padding-top: 0.5rem;
+
     ul {    
         display: flex;
         li {
@@ -20,12 +21,24 @@
                 &.active {
                     color: $green;
                     border-top: solid 2px;
-                    padding-top: 0.7rem;
+                    padding-top: 1.2rem;
                 }
                 &:hover {
                     color: $green;
                 }
             }
+        }
+    }
+    .imageContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $bgGreen;
+        width: 30px;
+        height: 30px;
+         border-radius: 50%;
+        img {
+            width: 1rem;
         }
     }
 }
