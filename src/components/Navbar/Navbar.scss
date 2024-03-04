@@ -5,8 +5,10 @@
     grid-template-columns: 20% auto 20%;
     align-items: center;
     justify-items: center;
-
-    ul {
+    border-top: solid 2px $lightGrey;
+    margin: 2rem 1rem 0 1rem;
+    
+    ul {    
         display: flex;
         li {
             list-style: none;
@@ -14,6 +16,15 @@
                 color: $black;
                 text-decoration: none;
                 padding: 0 1rem;
+                transition: all 0.2s ease-in-out;
+                &.active {
+                    color: $green;
+                    border-top: solid 2px;
+                    padding-top: 0.7rem;
+                }
+                &:hover {
+                    color: $green;
+                }
             }
         }
     }
