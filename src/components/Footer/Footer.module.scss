@@ -1,0 +1,36 @@
+@import "../../assets/Vars.scss";
+
+footer {
+    background-color: $darkGreen;
+    margin-top: 18vh;
+    padding: 2rem 5%;
+    display: flex;
+    color: #FFFFFF99;
+    justify-content: space-between;
+    .logoSection {
+        width: 22vw;
+        div {
+            img {
+                margin-bottom: 0.2rem;
+            }
+            margin-bottom: 2rem;
+        }
+    }
+    .backToTop {
+        display: flex;
+        align-items: flex-end;
+        a {
+            color: #FFFFFF99;
+            text-decoration: none;
+            span {
+                display: flex;
+                p {
+                    margin-right: 0.3rem;
+                }
+                img {
+                    width: 1.5rem;
+                }
+            }
+        }
+    }
+}
