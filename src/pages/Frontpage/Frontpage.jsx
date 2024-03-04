@@ -1,7 +1,11 @@
-import { HeroSlider } from "./Slider/Slider";
+import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper";
+import { Header } from "../../components/Header/Header"
+
 
 export const Frontpage = () => {
     return (
-        <HeroSlider />
+    <ContentWrapper title="Forside">
+       <Header />
+    </ContentWrapper>
     )
 }

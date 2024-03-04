@@ -14,6 +14,7 @@ const HeroSlider = () => {
       duration: 800,
       interval: 6000,
       indicators: false,
+      
     }
     return (
         <div className={Styles.sliderContainer}>
