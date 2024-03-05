@@ -20,10 +20,9 @@ footer {
         display: flex;
         align-items: flex-end;
         a {
+            display: flex;
             color: #FFFFFF99;
             text-decoration: none;
-            span {
-                display: flex;
                 p {
                     margin-right: 0.3rem;
                 }
@@ -32,5 +31,4 @@ footer {
                 }
             }
         }
-    }
 }

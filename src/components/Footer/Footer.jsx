@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import Styles from "./Footer.module.scss"
-import Logo from "../../assets/Images/Logo-white.svg"
-import ArrowUp from "../../assets/Images/icon-arrow-up.svg"
+import Logo from "../../assets/Images/Icons/Logo-white.svg"
+import ArrowUp from "../../assets/Images/Icons/icon-arrow-up.svg"
 
 export const Footer = () => {
     return (
@@ -19,10 +19,8 @@ export const Footer = () => {
                     window.scroll(0, 0)
                 }}
             >
-        <span>
             <p>Back to top</p>
             <img src={ArrowUp} alt="pill up" />
-        </span>
         </Link>
             </section>
         </footer>

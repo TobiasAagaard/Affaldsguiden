@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
-import Logo from "../../assets/Images/Logo.svg";
-import LoginUnlock from "../../assets/Images/icon-unlock.svg"
+import Logo from "../../assets/Images/Icons/Logo.svg";
+import LoginUnlock from "../../assets/Images/Icons/icon-unlock.svg"
 import "./Navbar.scss"
 
 export const Navbar = () => {
