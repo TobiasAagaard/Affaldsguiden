@@ -16,7 +16,7 @@ export const Footer = () => {
             <section className={Styles.backToTop}>
             <Link 
                 onClick={() => {
-                    window.scroll(0, 0)
+                    window.scroll(0,0)
                 }}
             >
             <p>Back to top</p>

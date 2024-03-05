@@ -1,3 +1,5 @@
+@import "../../assets/Vars.scss";
+
 .sectionContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -9,6 +11,52 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        h2 {
+            font-size: 4rem;
+            font-weight: 400;
+            color: $fontH;
+        span {
+            background: linear-gradient($grey, $grey) 100% 70% / 100% 20% no-repeat;;
+        }
+        }
+        p {
+            margin: 2rem 0;
+            width: 80%;
+            color: $fontP;
+        }
+        .btnContainer {
+            display: flex;
+            gap: 1rem;
+            width: 80%;
+
+            .mainBtn {
+                background-color: $darkGreen;
+                width: 50%;
+                height: 5vh;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                a {
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+            .defBtn {
+                background-color: $white;
+                width: 50%;
+                height: 5vh;
+                border: 2px solid $lightGreen;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.5s ease-in-out;
+                a {
+                    color: $lightGreen;
+                    text-decoration: none;
+                }
+               
+
+            }
+        }
     }
     figure {
         img {

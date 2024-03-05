@@ -12,14 +12,18 @@ export const Frontpage = () => {
        <Header />
        <section className={Styles.sectionContainer}>
         <article>
-                <h2>Din guide til sortering</h2>
+                <h2>Din <span> guide til sortering </span></h2>
                 <p>Her kan du se hvordan du skal sortere og hvad der skal i hvilke
                 beholdere. Du får også tips og tricks til, hvordan du gør det nemt
                  at sortere hjemme hos dig.
                  </p>
-                 <div>
-                    <Link>Se affaldsguide</Link>
-                    <Link>Bestil storskrald</Link>
+                 <div className={Styles.btnContainer}>
+                    <button className={Styles.mainBtn}>
+                        <Link >Se affaldsguide</Link>
+                    </button>
+                    <button className={Styles.defBtn}>
+                        <Link >Bestil storskrald</Link>
+                    </button>
                  </div>
             </article>
             <figure>
@@ -31,12 +35,14 @@ export const Frontpage = () => {
                 <img src={Trash} alt="" />
             </figure>
             <article>
-                <h2>Bestil din nye affaldsbeholder</h2>
+                <h2>Bestil <span> din nye affaldsbeholder </span></h2>
                 <p>when an unknown printer took a galley of type and scramble it to
                 make a type specimen book. It has survived not only
                 </p>
-                <div>
-                    <Link>Bestil nu</Link>
+                <div className={Styles.btnContainer}>
+                    <button className={Styles.mainBtn} style={{width: "30%"}}>
+                        <Link>Bestil nu</Link>
+                    </button>
                 </div>
             </article>
         </section>

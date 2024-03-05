@@ -1,0 +1,29 @@
+@import "../../assets//Vars.scss";
+
+.burgerNav {
+    display: none;
+}
+
+@media only screen and (max-width: 880px) {
+    .menuStyles {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 1.5rem;
+        height: 1.2rem;
+        top: 4.3rem;
+        right: 3rem;
+        cursor: pointer;
+        span {
+            height: 0.2rem;
+            width: 100%;
+            background-color: $lightGreen;
+            border-radius: 0.2rem;
+        }
+    }
+    .open {
+        display: flex;
+        flex-direction: column;
+    }
+}
