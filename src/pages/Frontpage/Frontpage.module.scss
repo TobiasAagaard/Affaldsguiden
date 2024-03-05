@@ -1,0 +1,19 @@
+.sectionContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 5rem auto;
+    
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    figure {
+        img {
+            width: 30vw;
+        }
+    }
+
+}

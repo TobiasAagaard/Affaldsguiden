@@ -9,7 +9,7 @@ export const Header = () => {
              <HeroSlider />
             
             <div className={Styles.container}>
-                <h2>Find og anmeld genbrugsstationer</h2>
+                <h1>Find og anmeld genbrugsstationer</h1>
                 <div className={Styles.buttonContainer}>
                     <Link>Find station</Link>
                     <Link>Log ind</Link>
