@@ -7,13 +7,9 @@ import Styles from "./Sortering.module.scss"
 export const Sortering = () => {
 
     const [sortering, setSortering] = useState([]);
-    
 
     
 
-    function handleInput (e)  {
-        setSearch(e.target.value);
-      }
 
     useEffect(() => {
         const endpoint = "http://localhost:3000/section";
@@ -32,6 +28,7 @@ export const Sortering = () => {
         getSortering()
        
     },[])
+
     return (
         <ContentWrapper title="Sortering | Din guide til en sund affaldssortering">
             <section className={Styles.sectionContainer}>
@@ -41,7 +38,7 @@ export const Sortering = () => {
                     </div>
                     <search>
                         <label htmlFor="search">
-                            <input type="search" placeholder="Søg på affald" name="search" id="search"   onChange={handleInput}/>
+                            <input type="search" placeholder="Søg på affald" name="search" id="search" />
                         </label>
                         
                     </search>

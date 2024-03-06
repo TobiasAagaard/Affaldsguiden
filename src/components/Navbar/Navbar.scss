@@ -1,13 +1,19 @@
 @import "../../assets//Vars.scss";
 
+
+.topNav{
+ padding: 2vh;
+ background-color: $white;
+}
 .navContainer {
     display: grid;
     grid-template-columns: 20% auto 20%;
     align-items: center;
     justify-items: center;
     border-top: solid 2px $lightGrey;
-    margin: 3rem 1rem 0 1rem;
-    padding-top: 0.5rem;
+    background-color: $white;
+    padding: 1vh;
+
 
     .mainNav {    
         display: flex;
@@ -20,8 +26,8 @@
                 transition: all 0.2s ease-in-out;
                 &.active {
                     color: $green;
+                    padding-top: 1.3rem;
                     border-top: solid 2px;
-                    padding-top: 1.2rem;
                 }
                 &:hover {
                     color: $green;
@@ -46,6 +52,9 @@
 @media only screen and (max-width: 880px) {
     .navContainer {
         display: flex;
+        img {
+            padding-left: 2rem;
+        }
         .mainNav {
             display: none;
         }

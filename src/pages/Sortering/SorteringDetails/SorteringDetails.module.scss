@@ -1,0 +1,35 @@
+@import "../../../assets//Vars.scss";
+
+.container {
+    max-width: 1200px;
+    margin: 10vh auto;
+    border: 2px solid #00000029;
+    border-radius: 20px;
+    .heading {
+        display: flex;
+        border-radius: 20px 20px 0 0;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            border-radius: 0 20px 0 0;
+        }
+        h1 {
+            color: $white;
+            margin-left: 5%;
+        }
+    }
+    figure {
+        display: flex;
+        margin: 5%;
+        align-items: center;
+        border-radius: 20px;
+        box-shadow: 0 0 15px -7px rgba(0, 0, 0, 1);
+        img {
+            margin: 2rem;
+            border-radius: 20px ;
+        }
+        h2 {
+            margin-left: 1%;
+        }
+    }
+}

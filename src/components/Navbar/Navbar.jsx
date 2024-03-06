@@ -8,6 +8,8 @@ export const Navbar = () => {
 
     return (
         <>
+        <div className="topNav">
+        </div>
         <nav className="navContainer">
                 <Link to={"/"}>
                     <img src={Logo} alt="Logo" />
@@ -27,5 +29,6 @@ export const Navbar = () => {
         </nav>
         <BurgerMenu />
         </>
+        
     )
 }
