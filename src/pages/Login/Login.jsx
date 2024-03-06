@@ -73,7 +73,7 @@ export const Login = () => {
             
             ) : (
             <div>
-                   <h1>Du er logget ind</h1>
+                   <h1>Logget ind</h1>
                     <button onClick={LogOut}>Log ud</button>
             </div>
 

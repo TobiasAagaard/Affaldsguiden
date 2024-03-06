@@ -12,7 +12,7 @@ export const Header = () => {
                 <h1>Find og anmeld genbrugsstationer</h1>
                 <div className={Styles.buttonContainer}>
                     <Link>Find station</Link>
-                    <Link>Log ind</Link>
+                    <Link to={"/login"}>Log ind</Link>
                 </div>
             </div>
             </div>
