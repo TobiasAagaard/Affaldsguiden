@@ -1,7 +1,9 @@
 import Carousel from "react-material-ui-carousel";
 import { ImageSlider } from "./ImageSlider";
 import Styles from "./Slider.module.scss"
-
+import { Button, StepButton } from "@mui/material";
+import Next from "../../assets/Images/Icons/icon-arrow-right.svg"
+import Previous from "../../assets/Images/Icons/icon-arrow-left.svg"
 const Item = (props) => {
     return(
         <img src={props.item.images} alt={props.item.title}/>
@@ -18,7 +20,27 @@ const HeroSlider = () => {
     }
     return (
         <div className={Styles.sliderContainer}>
-          <Carousel {...sliderSettings}>
+          <Carousel 
+           NavButton={({onClick, className, style, next, prev}) => {
+            return (
+                <Button onClick={onClick} className={className} style={style}>
+                    {next && <img className={Styles.nextBtn} src={Next} alt="" />}
+                    {prev && <img className={Styles.prevBtn} src={Previous} />}
+                </Button>
+            )
+        }}
+          
+
+        navButtonsProps={{
+          style: {
+              backgroundColor: 'inherit',
+              top: "50%",
+              transform: 'translate(-50%, -50%)',
+              
+          }
+      }} 
+
+          {...sliderSettings}>
             {ImageSlider.map((data) => (
               <Item key={data.id} item={data} />
             ))}

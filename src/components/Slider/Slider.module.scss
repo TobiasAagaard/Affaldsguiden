@@ -1,5 +1,15 @@
 .sliderContainer {
     height: 550px;
+    .nextBtn {
+        width: 100%;
+        height: 100%;
+        margin-right: 10%;
+    }
+    .prevBtn {
+        width: 100%;
+        height: 100%;
+        margin-left: 200%;
+    }
     img {
     width: 100%;
     height: 550px;

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper";
 import { Header } from "../../components/Header/Header";
-import Metal from "../../assets/Images/Imgs/trashcan_metal.webp"
-import Trash from "../../assets/Images/Imgs/recycling_trashcans.webp"
+import Guide from "../../assets/Images/Imgs/Frontpage1.webp"
+import Affaldsbeholder from "../../assets/Images/Imgs/Frontpage2.webp"
 import Styles from "./Frontpage.module.scss"
 
 
@@ -18,21 +18,21 @@ export const Frontpage = () => {
                  at sortere hjemme hos dig.
                  </p>
                  <div className={Styles.btnContainer}>
-                    <button className={Styles.mainBtn}>
-                        <Link >Se affaldsguide</Link>
-                    </button>
-                    <button className={Styles.defBtn}>
-                        <Link >Bestil storskrald</Link>
-                    </button>
+                    <Link to={'/sortering'} className={Styles.mainBtn}>
+                        <button>Se affaldsguide</button>
+                    </Link>
+                    <Link className={Styles.defBtn}>
+                        <button>Bestil storskrald</button>
+                    </Link>
                  </div>
             </article>
             <figure>
-                <img src={Metal} alt="" />
+                <img src={Guide} alt="" />
             </figure>
         </section>
         <section className={Styles.sectionContainer}>
             <figure>
-                <img src={Trash} alt="" />
+                <img src={Affaldsbeholder} alt="" />
             </figure>
             <article>
                 <h2>Bestil <span> din nye affaldsbeholder </span></h2>
@@ -40,9 +40,9 @@ export const Frontpage = () => {
                 make a type specimen book. It has survived not only
                 </p>
                 <div className={Styles.btnContainer}>
-                    <button className={Styles.mainBtn} style={{width: "30%"}}>
-                        <Link>Bestil nu</Link>
-                    </button>
+                    <Link className={Styles.mainBtn} style={{width: "30%"}}>
+                    <button >Bestil nu</button>
+                    </Link>
                 </div>
             </article>
         </section>

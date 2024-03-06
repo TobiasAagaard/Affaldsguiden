@@ -16,7 +16,7 @@ export const Navbar = () => {
                     <li><NavLink to={"/"}>Forside</NavLink></li>
                     <li><NavLink to={"/sortering"}>Sortering</NavLink></li>
                     <li><NavLink to={"/genbrugsstationer"}>Genbrugsstationer</NavLink></li>
-                    <li><NavLink to={"/bestil"}>Bestil beholde</NavLink></li>
+                    <li><NavLink to={"/bestil"}>Bestil beholder</NavLink></li>
                 </ul>
                 <Link to={"/login"}>
                     <div className="imageContainer">

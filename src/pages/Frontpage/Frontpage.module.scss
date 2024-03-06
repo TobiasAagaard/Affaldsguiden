@@ -33,12 +33,18 @@
                 background-color: $darkGreen;
                 width: 50%;
                 height: 5vh;
-                border: none;
                 border-radius: 5px;
-                cursor: pointer;
-                a {
+                text-decoration: none;
+                
+                
+                button {
+                    background-color: $darkGreen;
+                    width: 100%;
+                    height: 100%;
                     color: $white;
-                    text-decoration: none;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
                 }
             }
             .defBtn {
@@ -46,12 +52,18 @@
                 width: 50%;
                 height: 5vh;
                 border: 2px solid $lightGreen;
+                text-decoration: none;
                 border-radius: 5px;
-                cursor: pointer;
-                transition: 0.5s ease-in-out;
-                a {
+               
+                button {
+                    background-color: $white;
+                    width: 100%;
+                    height: 100%;
                     color: $lightGreen;
-                    text-decoration: none;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;    
+                   
                 }
                
 

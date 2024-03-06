@@ -1,0 +1,63 @@
+@import "../../assets//Vars.scss";
+
+.sectionContainer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 4rem 0;
+   .headerGroup {
+      margin-bottom: 2rem;
+    h1 {
+      color: $fontGreen;
+      text-align: center;
+      font-size: 2rem;
+    }
+    h2 {
+      color: $fontDarkGreen;
+      text-align: center;
+      font-size: 2rem;
+    }
+   }
+}
+
+.figContainer {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 2rem 2rem;
+   margin: 2rem auto;
+   max-width: 1200px;
+   
+
+   figure {
+      transition: 0.2s ease-in;
+      a {
+         object-fit: cover;
+         text-decoration: none;
+      img {
+         display: block;
+         width: 100%;
+         box-shadow: 0 0 15px -7px rgba(0, 0, 0, 1);
+         border-radius: 15px 15px 0 0;
+         transition: all 0.2s ease-in-out;
+      }
+      figcaption {
+         margin: 0;
+         padding: 1em 0;
+         box-shadow: 0 0 15px -7px rgba(0, 0, 0, 1);
+         border-radius: 0px 0px 15px 15px;
+         transition: all 0.2s ease-in-out;
+
+         h3 {
+            color: $white;
+            text-align: center;
+            font-size: 1.1rem;
+            
+         }
+      }
+   }
+   &:hover {
+      transform: scale(1.1);
+   }
+}
+}
+
