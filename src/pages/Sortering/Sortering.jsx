@@ -7,9 +7,9 @@ import Styles from "./Sortering.module.scss"
 export const Sortering = () => {
 
     const [sortering, setSortering] = useState([]);
+    const [search, setSearch] = useState("")
 
-    
-
+  
 
     useEffect(() => {
         const endpoint = "http://localhost:3000/section";
@@ -38,7 +38,7 @@ export const Sortering = () => {
                     </div>
                     <search>
                         <label htmlFor="search">
-                            <input type="search" placeholder="Søg på affald" name="search" id="search" />
+                            <input type="search" onChange={(e) => setSearch(e.target.value)} placeholder="Søg på affald" name="search" id="search" />
                         </label>
                         
                     </search>
@@ -46,7 +46,11 @@ export const Sortering = () => {
             </section>
 
             <section className={Styles.figContainer}>
-                {sortering?.map((item) => {
+                {sortering?.filter((item) => {
+                    return search.toLowerCase() === ''
+                    ? item
+                    : item.title.toLowerCase().includes(search);
+                })?.map((item) => {
                     return (
                             <figure key={item.id}  >
                                 <Link to={`${item.id}`}>

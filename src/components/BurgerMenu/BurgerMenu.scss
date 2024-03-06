@@ -59,14 +59,11 @@
         transition: transform 0.8s ease-in-out;
         li {
             list-style: none;
+            opacity: 0;
+            transition: 1s ease-in-out;
             a {
                 color: $black;
                 text-decoration: none;
-                div {
-                    width: 20px;
-                    height: 20px;
-                    border-radius: 50%;
-                }
                 &.active {
                     color: $lightGreen;
                 }
@@ -84,7 +81,7 @@
             height: px;
              border-radius: 50%;
             img {
-                width: 2rem;
+                width: 1.1rem;
             }
             .profileImg {
                 width: 1.5rem;
@@ -94,7 +91,9 @@
     }
     .open {
         transform:translateX(0%) ;
-        
+        li {
+            opacity: 1;
+        }
     }
 }
 

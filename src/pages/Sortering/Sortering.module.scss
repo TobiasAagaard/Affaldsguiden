@@ -18,6 +18,14 @@
       font-size: 2rem;
     }
    }
+  input[type=search] {
+   width: 30vw;
+   height: 3vh;
+   border: none;
+   border-radius: 20px;
+   box-shadow: 0 0 15px -7px rgba(0, 0, 0, 1);
+   padding: 10px;
+  }
 }
 
 .figContainer {
