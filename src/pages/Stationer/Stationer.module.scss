@@ -1,19 +1,25 @@
+@import "../../assets//Vars.scss";
+
 .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
     max-width: 1200px;
     margin: 10vh auto;
-    
+  
     .stationsContainer {
         margin-bottom: 2rem;
         box-shadow: 0 0 15px -9px rgba(0, 0, 0, 1);
         border-radius: 5px; 
         iframe {
             border: none;
-            border-radius: 5px 5px 0 0; 
+            border-radius: 10px 10px 0 0; 
             width: 100%;
         }
+        a {
+            text-decoration: none;
+            color: $black;
+
         .infoContainer {
            padding: 1rem;
            border: none;
@@ -24,7 +30,15 @@
             }
             p {
                 font-size: 0.9rem;
+                color: $fontP;
             }
+            .zipContainer {
+                display: flex;
+                p {
+                    margin-right: 0.5rem;
+                }
+            } 
         }
+    }
     }
 }

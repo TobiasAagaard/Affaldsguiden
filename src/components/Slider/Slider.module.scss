@@ -17,3 +17,15 @@
     
     }
 }
+
+@media only screen and (max-width: 880px) {
+    .sliderContainer {
+        .nextBtn {
+            width: 70%;
+        }
+        .prevBtn {
+            width: 70%;
+        }
+    }
+
+}

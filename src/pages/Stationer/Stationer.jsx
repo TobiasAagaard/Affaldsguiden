@@ -1,7 +1,8 @@
 import axios from "axios";
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper.jsx";
-import Styles from "./Stationer.module.scss"
+import Styles from "./Stationer.module.scss";
 
 
 
@@ -30,12 +31,17 @@ export const Stationer = () => {
                 {stations?.map((item) => {
                     return (
                         <article key={item.id} className={Styles.stationsContainer}>
-                            <iframe title="Location" className={Styles.googleMap}  src={`https://maps.google.com/maps?q=${item.longtitude},${item.latitude}&hl=es;&output=embed`}></iframe>
+                            <iframe title="Location" className={Styles.googleMap}  src={`https://maps.google.com/maps?q=${item.longtitude},${item.latitude}&hl=es;&output=embed`} />
+                            <Link>
                             <div className={Styles.infoContainer}>
                                 <h3>{item.name}</h3>
                                 <p>{item.address}</p>
-                                <p>{item.zipcode} {item.city}</p>
+                                <div className={Styles.zipContainer}>
+                                  <p>{item.zipcode} </p>
+                                  <p>{item.city}</p>
+                                </div>
                             </div>
+                            </Link>
                         </article>
                     )
                 })}
