@@ -1,0 +1,30 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    max-width: 1200px;
+    margin: 10vh auto;
+    
+    .stationsContainer {
+        margin-bottom: 2rem;
+        box-shadow: 0 0 15px -9px rgba(0, 0, 0, 1);
+        border-radius: 5px; 
+        iframe {
+            border: none;
+            border-radius: 5px 5px 0 0; 
+            width: 100%;
+        }
+        .infoContainer {
+           padding: 1rem;
+           border: none;
+          
+            h3 {
+                font-weight: 400;
+                font-size: 1.1rem;
+            }
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

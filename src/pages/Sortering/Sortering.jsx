@@ -31,6 +31,7 @@ export const Sortering = () => {
 
     return (
         <ContentWrapper title="Sortering | Din guide til en sund affaldssortering">
+            <div className={Styles.fullContainer}>
             <section className={Styles.sectionContainer}>
                     <div className={Styles.headerGroup}>
                         <h1>Din guide</h1>
@@ -63,6 +64,7 @@ export const Sortering = () => {
                     )
                 })}
             </section>
+            </div>
         </ContentWrapper>
     )
 }
