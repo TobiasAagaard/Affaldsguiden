@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Styles from "./Sortering.module.scss"
 export const Sortering = () => {
 
-    const [sortering, setSortering] = useState([]);
+    const [sorting, setSorting] = useState([]);
     const [search, setSearch] = useState("")
 
   
@@ -14,10 +14,10 @@ export const Sortering = () => {
     useEffect(() => {
         const endpoint = "http://localhost:3000/section";
 
-        const getSortering = async () => {
+        const getSorting = async () => {
             try {
                 const res = await axios(endpoint);
-                setSortering(res.data)
+                setSorting(res.data)
                 console.log(res)
             } 
             catch (err) {
@@ -25,7 +25,7 @@ export const Sortering = () => {
             }
         };
        
-        getSortering()
+        getSorting()
        
     },[])
 
@@ -47,7 +47,7 @@ export const Sortering = () => {
             </section>
 
             <section className={Styles.figContainer}>
-                {sortering?.filter((item) => {
+                {sorting?.filter((item) => {
                     return search.toLowerCase() === ''
                     ? item
                     : item.title.toLowerCase().includes(search);

@@ -28,11 +28,11 @@ export const Stationer = () => {
     return (
         <ContentWrapper title="Genbrugsstationer">
             <section className={Styles.wrapper}>
-                {stations?.map((item) => {
+                {stations?.slice(0,5)?.map((item) => {
                     return (
                         <article key={item.id} className={Styles.stationsContainer}>
                             <iframe title="Location" className={Styles.googleMap}  src={`https://maps.google.com/maps?q=${item.longtitude},${item.latitude}&hl=es;&output=embed`} />
-                            <Link>
+                            <Link to={`${item.id}`}>
                             <div className={Styles.infoContainer}>
                                 <h3>{item.name}</h3>
                                 <p>{item.address}</p>

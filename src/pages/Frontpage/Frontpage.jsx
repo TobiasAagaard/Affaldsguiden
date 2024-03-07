@@ -21,7 +21,7 @@ export const Frontpage = () => {
                     <Link to={'/sortering'} className={Styles.mainBtn}>
                         <button>Se affaldsguide</button>
                     </Link>
-                    <Link className={Styles.defBtn}>
+                    <Link to={'/bestil'} className={Styles.defBtn}>
                         <button>Bestil storskrald</button>
                     </Link>
                  </div>
@@ -40,8 +40,8 @@ export const Frontpage = () => {
                 make a type specimen book. It has survived not only
                 </p>
                 <div className={Styles.btnContainer}>
-                    <Link className={Styles.mainBtn} style={{width: "30%"}}>
-                    <button >Bestil nu</button>
+                    <Link to={'/bestil'} className={Styles.mainBtn} style={{width: "30%"}}>
+                    <button>Bestil nu</button>
                     </Link>
                 </div>
             </article>

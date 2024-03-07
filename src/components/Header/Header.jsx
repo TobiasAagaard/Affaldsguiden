@@ -11,7 +11,7 @@ export const Header = () => {
             <div className={Styles.container}>
                 <h1>Find og anmeld genbrugsstationer</h1>
                 <div className={Styles.buttonContainer}>
-                    <Link>Find station</Link>
+                    <Link to={'/genbrugsstationer'}>Find station</Link>
                     
                     <Link to={"/login"}>Log ind</Link>
                 </div>
