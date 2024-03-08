@@ -33,16 +33,14 @@
                 font-size: 0.9rem;
                 color: $fontP;
             }
-            .zipContainer {
-                display: flex;
-                p {
-                    margin-right: 0.5rem;
-                }
-            } 
+           
         }
     }
    
     }
+}
+.wave {
+    width: 100%;
 }
 
 @media only screen and (max-width: 1225px) { 

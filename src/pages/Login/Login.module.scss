@@ -116,15 +116,19 @@
 
 @media only screen and (max-width: 900px) { 
     .loginContainer {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
         article {
         a {
             width: 18rem;
+            
         }
     }
-        form {
-            margin: auto;
-        }
+    form {
+        margin-bottom: 10rem;
+    }
 }
 }
 

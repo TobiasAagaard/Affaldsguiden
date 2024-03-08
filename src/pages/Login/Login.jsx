@@ -11,26 +11,36 @@ import { Footer } from "../../components/Footer/Footer";
 import Logo from "../../assets/Images/Icons/Logo.svg";
 import Styles from "./Login.module.scss";
 
+
+//function component til login
 export const Login = () => {
 
+    //Destructer variabler til at opsætte useForm react-hook-form 
     const { register, handleSubmit, reset, formState: {errors}} = useForm()
+    //Destructer loginData så vi kan få fat i vores auth context i vores provider
     const { loginData, setLoginData } = useAuth()
+    //en errorhandeling
     const [ errMes, setErrMes ] = useState('')
+    //Destructer så vi kan lave function til at skjule og vise password
     const [open, setOpen] = useState(false)
 
-    const toggle = () => {
-        setOpen(!open)
-      }
    
+   //function som aktiveres ved submit 
     const loginRequest = async (data) => {
+
+        //laver formData og appender username og password. Så vi kan sende kærneværdier op i url
         const formData = new URLSearchParams();
         formData.append("username", data.username)
         formData.append("password", data.password)
 
+        //endpoint / url
         const endpoint = `http://localhost:3000/login`;
         try {
+            //sender et post requst til apiet med vores formData
             const res = await axios.post(endpoint, formData)
-            handleSessionData(res.data.access_token)
+
+            //giver handleSessionData res data som property
+            handleSessionData(res.data)
             console.log(res)
         }
         catch(err) {
@@ -38,22 +48,32 @@ export const Login = () => {
             setErrMes('Forkert brugernavn eller password')
         }
     }
-
+    //Håndtere data i sessionStorage
     const handleSessionData = data => {
         if(data) {
+            //parser token ud til en string
             sessionStorage.setItem('token', JSON.stringify(data));
+            //giver loginData data property
             setLoginData(data)
         }
     }
- 
+    //function til at logge ud 
     const LogOut = () => {
+        //fjerner token
         sessionStorage.removeItem('token')
+        //Giver en tom værdi
         setLoginData('')
+        //reseter login form for login oplysninger når man logger ud
         reset()
 
 
         console.log("Logget ud korrekt")
     }
+
+    //Function til at kontroller om password vises eller skjules
+    const toggle = () => {
+        setOpen(!open)
+      }
     
     return (
         <ContentWrapper title="Login">

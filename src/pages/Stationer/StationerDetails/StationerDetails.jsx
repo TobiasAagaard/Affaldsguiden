@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import { ContentWrapper } from "../../../components/ContentWrapper/ContentWrapper";
 import { Reviews } from "../../../components/Reviews/Reviews/Reviews";
+import Wave from "../../../assets/Images/Imgs/bg-wave-1.svg"
 import Styles from "./StationerDetails.module.scss";
 
 
@@ -51,6 +52,7 @@ export const StationerDetails = () => {
             <Reviews />
           </div>
         </section>
+        <img className={Styles.wave} src={Wave} alt="Wave billede til bunden" />
         </ContentWrapper>
          ) : null}
        </>

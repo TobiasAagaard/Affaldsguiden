@@ -4,10 +4,12 @@ import { Header } from "../../components/Header/Header";
 import Guide from "../../assets/Images/Imgs/Frontpage1.webp"
 import Affaldsbeholder from "../../assets/Images/Imgs/Frontpage2.webp"
 import Styles from "./Frontpage.module.scss"
+import Wave from "../../assets/Images/Imgs/bg-wave-1.svg"
 
 
 export const Frontpage = () => {
     return (
+    <>
     <ContentWrapper title="Forside | Find og anmeld genbrugsstationer">
        <Header />
        <section className={Styles.sectionContainer}>
@@ -27,12 +29,12 @@ export const Frontpage = () => {
                  </div>
             </article>
             <figure>
-                <img src={Guide} alt="" />
+                <img src={Guide} alt="Billede tilhøre se affaldsguide section" />
             </figure>
         </section>
         <section className={Styles.sectionContainer}>
             <figure>
-                <img src={Affaldsbeholder} alt="" />
+                <img src={Affaldsbeholder} alt="Billede tilhøre Bestil din nye affaldsbeholder section" />
             </figure>
             <article>
                 <h2>Bestil <span> din nye affaldsbeholder </span></h2>
@@ -45,7 +47,10 @@ export const Frontpage = () => {
                     </Link>
                 </div>
             </article>
+            
         </section>
+        <img className={Styles.wave} src={Wave} alt="Wave billede til bunden" />
     </ContentWrapper>
+    </>
     )
 }

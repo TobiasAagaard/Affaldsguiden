@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react"
 import { useParams, Link } from "react-router-dom"
 import { ContentWrapper } from "../../../components/ContentWrapper/ContentWrapper";
-
+import Wave from "../../../assets/Images/Imgs/bg-wave-1.svg"
 import Styles from "./SorteringDetails.module.scss"
 
 export const SorteringDetails = () => {
@@ -36,7 +36,7 @@ export const SorteringDetails = () => {
         const getTypes = async () => {
           try {
             const res = await axios.get(
-              `http://localhost:3000/types/${id}`
+              `http://localhost:3000/types/1`
             );
             setTypes(res.data);
             console.log(res)
@@ -70,7 +70,7 @@ export const SorteringDetails = () => {
                         )
                     })}
              </figure>
-             
+             <img className={Styles.wave} src={Wave} alt="Wave billede til bunden" />
             </ContentWrapper>
           ) : null}
         </>

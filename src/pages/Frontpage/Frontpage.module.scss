@@ -45,6 +45,11 @@
                     border: none;
                     border-radius: 5px;
                     cursor: pointer;
+                    transition: 0.5s ease-in-out;
+
+                    &:hover {
+                        background-color: $lightGreen ;
+                    }
                 }
             }
             .defBtn {
@@ -55,14 +60,20 @@
                 text-decoration: none;
                 border-radius: 5px;
                
+               
                 button {
                     background-color: $white;
                     width: 100%;
                     height: 100%;
                     color: $lightGreen;
                     border: none;
-                    border-radius: 5px;
-                    cursor: pointer;    
+                    cursor: pointer;   
+                    transition: 0.5s ease-in-out;
+                    &:hover {
+                        background-color: $lightGreen ;
+                        color: $white;
+                        border-radius: 0;
+                    } 
                    
                 }
                
@@ -76,6 +87,9 @@
         }
     }
 
+}
+.wave {
+    width: 100%;
 }
 
 

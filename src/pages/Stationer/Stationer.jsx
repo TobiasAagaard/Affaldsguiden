@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper.jsx";
 import Styles from "./Stationer.module.scss";
+import Wave from "../../assets/Images/Imgs/bg-wave-1.svg"
 
 
 
@@ -36,16 +37,14 @@ export const Stationer = () => {
                             <div className={Styles.infoContainer}>
                                 <h3>{item.name}</h3>
                                 <p>{item.address}</p>
-                                <div className={Styles.zipContainer}>
-                                  <p>{item.zipcode} </p>
-                                  <p>{item.city}</p>
-                                </div>
+                                <p>{item.zipcode} {item.city}</p>
                             </div>
                             </Link>
                         </article>
                     )
                 })}
             </section>
+            <img className={Styles.wave} src={Wave} alt="Wave billede til bunden" />
         </ContentWrapper>
     )
 }

@@ -5,15 +5,22 @@ import Placeholder from "../../../assets/Images/Icons/placeholder.svg"
 import Styles from "./Reviews.module.scss";
 import { useParams } from "react-router-dom";
 
+
+//tager review data gennem props og visr det i stjerner 
 const NumStars = (props) => {
+
+  // laver 5 arrays som bliver fyldt med tom string  
     const [numStars] = useState(new Array(5).fill(""));
   
     return (
       <div className={Styles.starContainer}>
+
+        {/* mapper arrayet ud */}
         {numStars &&
           numStars.map((s, index) => {
             return (
               <div className={Styles.starContainer} key={index}>
+                {/*Hvis index er størest så viser den grå stjerner */}
                 {index > props.num_stars - 1 ? (
                     <FaStar className={Styles.star} style={{ color: '#D9D9D9' }} />
                 ) : (

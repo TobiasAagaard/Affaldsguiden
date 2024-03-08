@@ -7,12 +7,14 @@ import "./BurgerMenu.scss";
 
 
 export const BurgerMenu = () => {
-    const { loginData } = useAuth() 
 
+
+    const { loginData } = useAuth() 
     const [menuOpen, setMenuOpen] = useState(false) 
     
     const handleToggle = () => {
         setMenuOpen(!menuOpen)
+
         document.body.style.overflowY = document.body.style.overflowY == 'hidden' ? 'visible'  : 'hidden';
         
     } 
