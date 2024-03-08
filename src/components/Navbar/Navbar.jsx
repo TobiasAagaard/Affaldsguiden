@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+
 import Logo from "../../assets/Images/Icons/Logo.svg";
 import LoginUnlock from "../../assets/Images/Icons/icon-unlock.svg";
 import Profile from "../../assets/Images/Icons/Profile.svg"
@@ -8,6 +9,7 @@ import "./Navbar.scss"
 
 export const Navbar = () => {
     const { loginData } = useAuth() 
+
     return (
         <>
         <div className="topNav">

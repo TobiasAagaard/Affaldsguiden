@@ -1,7 +1,7 @@
 import Carousel from "react-material-ui-carousel";
 import { ImageSlider } from "./ImageSlider";
 import Styles from "./Slider.module.scss"
-import { Button, StepButton } from "@mui/material";
+import { Button, } from "@mui/material";
 import Next from "../../assets/Images/Icons/icon-arrow-right.svg"
 import Previous from "../../assets/Images/Icons/icon-arrow-left.svg"
 const Item = (props) => {
@@ -24,8 +24,8 @@ const HeroSlider = () => {
            NavButton={({onClick, className, style, next, prev}) => {
             return (
                 <Button onClick={onClick} className={className} style={style}>
-                    {next && <img className={Styles.nextBtn} src={Next} alt="" />}
-                    {prev && <img className={Styles.prevBtn} src={Previous} />}
+                    {next && <img className={Styles.nextBtn} src={Next} alt="Knap til at gå til næste" />}
+                    {prev && <img className={Styles.prevBtn} src={Previous} alt="knap til at gå tilbage" />}
                 </Button>
             )
         }}

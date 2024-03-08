@@ -27,7 +27,7 @@ export const Stationer = () => {
 
     return (
         <ContentWrapper title="Genbrugsstationer">
-            <section className={Styles.wrapper}>
+            <section className={Styles.mainContainer}>
                 {stations?.slice(0,5)?.map((item) => {
                     return (
                         <article key={item.id} className={Styles.stationsContainer}>

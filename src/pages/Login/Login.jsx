@@ -1,16 +1,26 @@
+import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useAuth } from "../../Providers/AuthProvider";
 import { useState } from "react";
-import axios from "axios";
+import { Link } from "react-router-dom";
 import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper";
+import { BsFillEyeFill } from "react-icons/bs";
+import { BsFillEyeSlashFill } from "react-icons/bs";
+import { Navbar } from "../../components/Navbar/Navbar";
+import { Footer } from "../../components/Footer/Footer";
+import Logo from "../../assets/Images/Icons/Logo.svg";
+import Styles from "./Login.module.scss";
 
 export const Login = () => {
 
     const { register, handleSubmit, reset, formState: {errors}} = useForm()
     const { loginData, setLoginData } = useAuth()
     const [ errMes, setErrMes ] = useState('')
+    const [open, setOpen] = useState(false)
 
-    
+    const toggle = () => {
+        setOpen(!open)
+      }
    
     const loginRequest = async (data) => {
         const formData = new URLSearchParams();
@@ -49,33 +59,47 @@ export const Login = () => {
         <ContentWrapper title="Login">
             {!loginData  ?
             (
+                <section className={Styles.loginContainer}>
+                    <article>
+                        <Link to={"/"}>
+                            <img src={Logo} alt="Logo" />
+                        </Link>
+                        <h2>Log ind på Affaldsguiden</h2>
+                        <h3>for at anmelde stationer</h3>
+                    </article>
                     <form onSubmit={handleSubmit(loginRequest)} >
-                        <div > 
-                            <h1>Login</h1>
-                            <p>Indtast dit brugernavn og adgangskode for at logge ind</p>
+                        <div className={Styles.container}> 
+                            <h1>Log ind</h1>
+                           
                         </div>
-
-
-                            <input type="text" name="username" placeholder="Brugernavn" id="username" {...register("username", {required: true})} />
-                            {errors.username && ( <div>Tast dit brugernavn!</div> )}
+                            <div className={Styles.inputContainer}>
+                                <input type="text" name="username" placeholder="E-mail" id="username" {...register("username", {required: true})} />
+                                {errors.username && ( <div className={Styles.error}>Tast dit brugernavn!</div> )}
+                            </div>
                      
-
-                      
-                            <input type="password" name="password" placeholder="Adgangskode" id="password"{...register("password", {required: true})} />
-                            {errors.password && (<div>Tast din adgangskode!</div>)}
+                                <div className={Styles.inputContainer}>
+                                    <input type={(open === false) ? 'password' : 'text'} name="password" placeholder="Adgangskode" id="password"{...register("password", {required: true})}  />
+                                    <span className={Styles.onOffpassword}>{(open === false) ? <BsFillEyeFill onClick={toggle} /> : <BsFillEyeSlashFill onClick={toggle}  /> }</span>
+                                    {errors.password && (<div className={Styles.error}>Tast din adgangskode!</div>)}
+                                </div>
                     
-                        {errMes && (<div>{errMes}</div>)}
-                        <div>
+                        {errMes && (<div className={Styles.error}>{errMes}</div>)}
+
+                        <div className={Styles.buttonContainer}>
                             <button>Log Ind</button>
-                            <button onClick={() => reset()}>Annuller</button>
                         </div>
                     </form>
+                    </section>
             
             ) : (
-            <div>
-                   <h1>Logget ind</h1>
+            <>
+            <Navbar />
+                <section className={Styles.minSide}>
+                   <h1>Min side</h1>
                     <button onClick={LogOut}>Log ud</button>
-            </div>
+                </section>
+            <Footer />
+            </>
 
             )}
 

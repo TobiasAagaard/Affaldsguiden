@@ -1,0 +1,132 @@
+@import "../../assets//Vars.scss";
+
+.loginContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+   height: 100vh;
+
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        a {
+            width: 50%;
+        img {
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+    }
+        h2 {
+            text-align: center;
+            font-weight: 500;
+            color: #202020;
+
+        }
+        h3 {
+            text-align: center;
+            font-weight: 500;
+            color: #202020;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        background-color: #FBFCFC;
+        box-shadow: 0 0 15px -9px rgba(0, 0, 0, 1);
+        border: none;
+        border-radius: 20px;
+        max-width: 27rem;
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        
+    
+        .inputContainer{
+        position: relative;
+        width: 100%;
+       justify-content: space-around;
+        input {
+            width: 22rem;
+            height: 2rem;
+            margin-top: 1.5rem;
+            padding-left: 1rem;
+            box-shadow: 0 0 15px -9px rgba(0, 0, 0, 1);
+            border-radius: 8px;
+            border: none;
+        }
+        .onOffpassword {
+            position: absolute;
+            top: 50%;
+            right: 8%;
+            color: #84818A;
+        }
+    }       
+
+        .error {
+            color: red;
+        }
+        .buttonContainer {
+            display: flex;
+            justify-content: center;
+            button {
+                    background-color: $darkGreen;
+                    width: 8rem;
+                    margin-top: 2rem;
+                    padding: 0.6rem;
+                    color: $white;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+            }
+        }
+    }
+}
+
+.minSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+    height: 67vh;
+    h1 {
+        font-weight: 500;
+        font-size: 2.5rem;
+    }
+    button {
+        background-color: $darkGreen;
+        width: 10rem;
+        margin-top: 2rem;
+        padding: 0.6rem;
+        color: $white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 900px) { 
+    .loginContainer {
+        grid-template-columns: 1fr;
+        article {
+        a {
+            width: 18rem;
+        }
+    }
+        form {
+            margin: auto;
+        }
+}
+}
+
+
+ 

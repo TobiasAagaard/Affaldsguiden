@@ -1,0 +1,44 @@
+.reviewsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    article {
+        display: flex;
+        img {
+            margin-right: 0.5rem;
+            width: 12%;
+            
+        }
+        .containerWrapper {
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           width: 100%;
+
+           .topFlex {
+            display: flex;
+            justify-content: space-between;
+            h3 {
+                font-weight: 400;
+                font-size: 1rem;
+            }
+           }
+          
+        }
+    }
+}
+.starContainer {
+    display: flex;
+}
+
+@media only screen and (max-width: 1025px) { 
+    .reviewsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 625px) { 
+    .reviewsContainer {
+        grid-template-columns: repeat 1fr;
+        justify-content: center;
+    }
+}

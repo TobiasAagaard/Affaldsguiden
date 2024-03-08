@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import { ContentWrapper } from "../../../components/ContentWrapper/ContentWrapper";
+import { Reviews } from "../../../components/Reviews/Reviews/Reviews";
+import Styles from "./StationerDetails.module.scss";
 
 
 export const StationerDetails = () => {
@@ -27,22 +29,30 @@ export const StationerDetails = () => {
 
    
     return (
-       <>
-         {details ? (
-        <>
-          <figure className="locationdetailCard" key={details.id}>
-          <iframe title="Location"  src={`https://maps.google.com/maps?q=${details.longtitude},${details.latitude}&hl=es;&output=embed`} />
-            <figcaption>
-              <h2>{details.name}</h2>
-              <p>{details.address}</p>
-              <p>
-                {details.zipcode} {details.city}
-              </p>
-              <p>{details.country}</p>
-            </figcaption>
-          </figure>
-        </>
-      ) : null}
+      <>
+        {details ? (
+        <ContentWrapper title={`Genbrugsstationer | ${details.name}`}>
+          <section className={Styles.locationContainer}>
+        
+            <figure key={details.id}>
+            <iframe title="Location"  src={`https://maps.google.com/maps?q=${details.longtitude},${details.latitude}&hl=es;&output=embed`} />
+              <figcaption>
+                <h2>{details.name}</h2>
+                
+                  <p>{details.address}</p>
+                  <p>
+                    {details.zipcode}  {details.city}
+                  </p>
+                  <p>{details.country}</p>
+              </figcaption>
+            </figure>
+       
+          <div className={Styles.reviewsContainer}>
+            <Reviews />
+          </div>
+        </section>
+        </ContentWrapper>
+         ) : null}
        </>
     )
 } 

@@ -26,9 +26,10 @@ function App() {
           <Route path="/genbrugsstationer" element={<Stationer />} />
           <Route path="/genbrugsstationer/:id" element={<StationerDetails />} />
 
-          <Route path="/login" element={<Login />} />
+          
           <Route path="*" element={<NotFound />} />
         </Route>
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   )
