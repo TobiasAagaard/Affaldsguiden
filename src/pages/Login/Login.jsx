@@ -45,7 +45,7 @@ export const Login = () => {
         }
         catch(err) {
             console.error('Kunne ikke logge ind')
-            setErrMes('Forkert brugernavn eller password')
+            setErrMes('Forkert E-mail eller password')
         }
     }
     //Håndtere data i sessionStorage
@@ -94,7 +94,7 @@ export const Login = () => {
                         </div>
                             <div className={Styles.inputContainer}>
                                 <input type="text" name="username" placeholder="E-mail" id="username" {...register("username", {required: true})} />
-                                {errors.username && ( <div className={Styles.error}>Tast dit brugernavn!</div> )}
+                                {errors.username && ( <div className={Styles.error}>Tast din E-mail!</div> )}
                             </div>
                      
                                 <div className={Styles.inputContainer}>

@@ -11,6 +11,7 @@ export const StationerDetails = () => {
 
     const [details, setDetails] = useState([])
     const { id } = useParams();
+  
 
     useEffect (() => {
         const endpoint = (`http://localhost:3000/orgs/${id}`)

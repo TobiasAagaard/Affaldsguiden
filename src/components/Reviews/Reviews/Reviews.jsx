@@ -40,6 +40,8 @@ const [reviewsList, setReviewsList] = useState([]);
 
 const {id} = useParams();
 
+
+
   useEffect(() => {
     const getReviewsList = async () => {
       try {
