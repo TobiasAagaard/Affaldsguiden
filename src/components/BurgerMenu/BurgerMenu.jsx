@@ -14,7 +14,7 @@ export const BurgerMenu = () => {
     
     const handleToggle = () => {
         setMenuOpen(!menuOpen)
-
+        
         document.body.style.overflowY = document.body.style.overflowY == 'hidden' ? 'visible'  : 'hidden';
         
     } 
