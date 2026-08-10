@@ -12,7 +12,7 @@
   "dependencies": {
     "@mui/material": "^5.15.12",
     "axios": "^1.8.2",
-    "react": "^18.2.0",
+    "react": "^19.2.8",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.51.0",
     "react-material-ui-carousel": "^3.4.2",
@@ -21,7 +21,7 @@
     "vite-plugin-require": "^1.2.14"
   },
   "devDependencies": {
-    "@types/react": "^18.2.56",
+    "@types/react": "^19.2.18",
     "@types/react-dom": "^18.2.19",
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.56.0",
