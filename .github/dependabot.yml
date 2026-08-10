@@ -8,6 +8,7 @@ updates:
 
     groups:
       "catch-all-security-alerts":
+        applies-to: "security-updates"
         patterns:
           - "*"
         update-types:
