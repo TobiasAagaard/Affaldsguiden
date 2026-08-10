@@ -5,3 +5,12 @@ updates:
       - "/"
     schedule:
       interval: "weekly"
+
+    groups:
+      "catch-all-security-alerts":
+        patterns:
+          - "*"
+        update-types:
+          - "patch"
+          - "minor"
+          - "major"
